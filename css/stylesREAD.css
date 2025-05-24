@@ -429,6 +429,37 @@ small {
 	list-style-type: none;
 }
 
+.highlight {
+	font-family: 'Courier New', monospace;
+	font-family: 'Consolas', monospace;
+	color: hsl(227, 69%, 25%);
+}
+
+.prebg {
+	background-color: #f4f4f4;
+	padding: 10px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	border-radius: 5px;
+	color: hsl(227, 69%, 25%);
+}
+
+.iNeedSpace {
+	margin-top: 25px;
+}
+
+.iNeedMoreSpace {
+	margin-bottom: 25px;
+}
+
+.isItend {
+	margin-bottom: 50px;
+}
+
+.egg {
+	color: rgb(240, 217, 178);
+}
+
 /* !!! */
 @font-face {
 	font-family: 'AptosNarrow';
