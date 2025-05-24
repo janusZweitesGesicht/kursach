@@ -124,7 +124,6 @@
 	}
 
 	.burger {
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -148,7 +147,6 @@
 		transform-origin: center;
 	}
 
-
 	.burger.active .line:nth-child(1) {
 		transform: rotate(45deg) translate(5px, 5px);
 	}
@@ -160,7 +158,6 @@
 	.burger.active .line:nth-child(3) {
 		transform: rotate(-45deg) translate(5px, -5px);
 	}
-
 
 	.nav-wrapper {
 		display: flex;
@@ -182,7 +179,6 @@
 		flex-grow: 1;
 		flex: 1;
 		word-break: break-word;
-
 	}
 
 	.background-effects {
@@ -232,7 +228,6 @@
 
 		.nav-wrapper nav {
 			z-index: 999;
-			;
 			display: none;
 			flex-direction: column;
 			background-color: rgba(0, 0, 0, 0.9);
@@ -282,7 +277,6 @@
 		display: flex;
 		align-items: center;
 	}
-
 
 	.text-content {
 		display: flex;
@@ -368,7 +362,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 5px;
+		margin-top: 25px;
 		padding: 0;
 		/* height: 50px; */
 		/* Установите ширину в 100% от родительского контейнера */
@@ -482,11 +476,11 @@
 	/* fractal */
 	#fractalTree {
 		position: absolute;
-		top: 126px;
+		top: 150px;
 		/* или сколько нужно */
 		left: 0%;
 		width: 100%;
-		height: calc(100% - 126px);
+		height: calc(100% - 150px);
 		/* уменьшаем высоту, чтобы не вылезало за экран */
 		z-index: -1;
 	}
@@ -513,7 +507,6 @@
 		.navigation-dots {
 			flex-direction: column;
 			gap: 12px;
-			margin-left: 45px;
 			padding: 2px;
 		}
 
@@ -559,5 +552,4 @@
 			flex-direction: row;
 		}
 	}
-
 }

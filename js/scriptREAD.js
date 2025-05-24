@@ -77,3 +77,36 @@ window
 document.querySelector('.conversation').addEventListener('click', () => {
 	window.location.href = 'discussion.html';
 });
+
+//копировать код
+function copyCode(button) {
+	const codeBlock = button.previousElementSibling;
+	const code = codeBlock.innerText;
+	navigator.clipboard.writeText(code).then(() => {
+		button.textContent = '✅';
+		setTimeout(() => {
+			button.textContent = '📋';
+		}, 1500);
+	});
+}
+
+// //адаптив
+// document.addEventListener('DOMContentLoaded', function () {
+// 	const article = document.querySelector('.content-article');
+// 	const imageCaption = document.querySelector('.image-with-caption');
+
+// 	const updateWidth = () => {
+// 		const articlePadding = parseFloat(getComputedStyle(article).paddingLeft);
+// 		imageCaption.style.setProperty(
+// 			'--dynamic-width',
+// 			`calc(${articlePadding}px + 20px)`
+// 		);
+// 	};
+
+// 	updateWidth();
+
+// 	window.addEventListener('resize', updateWidth);
+
+// 	const resizeObserver = new ResizeObserver(updateWidth);
+// 	resizeObserver.observe(article);
+// });

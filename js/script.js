@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				{ name: 'Теории', link: '#' },
 				{ name: 'Примеры', link: '#' }
 			],
-			'Представление графики в цифре': [
+			'Представление графики в цифровом формате': [
 				{ name: 'Растровая графика', link: '#' },
 				{ name: 'Векторная графика', link: '#' },
 				{ name: '3D графика', link: '#' }
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				{ name: 'JavaScript', link: '#' },
 				{ name: 'Фреймворки', link: '#' }
 			],
-			'Технологии мультимедиа': [
+			Мультимедиа: [
 				{ name: 'Аудио', link: '#' },
 				{ name: 'Видео', link: '#' },
 				{ name: 'Анимация', link: '#' }
