@@ -90,23 +90,23 @@ function copyCode(button) {
 	});
 }
 
-// //адаптив
-// document.addEventListener('DOMContentLoaded', function () {
-// 	const article = document.querySelector('.content-article');
-// 	const imageCaption = document.querySelector('.image-with-caption');
+function randomBlink() {
+	const path1 = document.getElementById('path1');
+	const path2 = document.getElementById('path2');
 
-// 	const updateWidth = () => {
-// 		const articlePadding = parseFloat(getComputedStyle(article).paddingLeft);
-// 		imageCaption.style.setProperty(
-// 			'--dynamic-width',
-// 			`calc(${articlePadding}px + 20px)`
-// 		);
-// 	};
+	// Анимация мигания
+	path1.style.opacity = '0';
+	path2.style.opacity = '1';
 
-// 	updateWidth();
+	setTimeout(() => {
+		path1.style.opacity = '1';
+		path2.style.opacity = '0';
+	}, 300); // Длительность мигания (0.3s)
 
-// 	window.addEventListener('resize', updateWidth);
+	// Случайный интервал до следующего мигания (3-10 секунд)
+	const nextTime = 3000 + Math.random() * 7000;
+	setTimeout(randomBlink, nextTime);
+}
 
-// 	const resizeObserver = new ResizeObserver(updateWidth);
-// 	resizeObserver.observe(article);
-// });
+// Запускаем первый раз через случайный интервал
+setTimeout(randomBlink, 3000 + Math.random() * 7000);
