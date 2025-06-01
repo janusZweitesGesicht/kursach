@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const forumPosts = document.getElementById('forumPosts');
 	const emptyMessage = document.getElementById('emptyMessage');
 
-	loadPosts(); // загрузить сообщения из localStorage
+	loadPosts();
 
 	postForm.addEventListener('submit', function (e) {
 		e.preventDefault();
@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
            <p>${processedMessage}</p>
            <div class="post-actions">
                <button class="like-btn" data-id="${postId}" onclick="toggleLike(this)">Нравится (0)</button>
-               <button class="reply-btn" onclick="replyToPost('${escapeHtml(username)}', '${postId}')">Ответить</button>
+               <button class="reply-btn" onclick="replyToPost('${escapeHtml(
+									username
+								)}', '${postId}')">Ответить</button>
                <button class="delete-btn" onclick="deletePost('${postId}')">Удалить</button>
            </div>
            <hr />
@@ -94,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		// сначала выводим посты без replyTo (родительские)
-		posts.forEach(post => {
+		posts.forEach((post) => {
 			if (!post.replyTo) createPostElement(post);
 		});
 
-		// потом выводим ответы
-		posts.forEach(post => {
+		// ответы
+		posts.forEach((post) => {
 			if (post.replyTo) createPostElement(post);
 		});
 	}
@@ -117,15 +119,25 @@ document.addEventListener('DOMContentLoaded', function () {
            <div class="post-date">${post.date}</div>
            <p>${processedMessage}</p>
            <div class="post-actions">
-               <button class="like-btn" data-id="${post.id}" onclick="toggleLike(this)">Нравится (${post.likes || 0})</button>
-               <button class="reply-btn" onclick="replyToPost('${escapeHtml(post.username)}', '${post.id}')">Ответить</button>
-               <button class="delete-btn" onclick="deletePost('${post.id}')">Удалить</button>
+               <button class="like-btn" data-id="${
+									post.id
+								}" onclick="toggleLike(this)">Нравится (${
+			post.likes || 0
+		})</button>
+               <button class="reply-btn" onclick="replyToPost('${escapeHtml(
+									post.username
+								)}', '${post.id}')">Ответить</button>
+               <button class="delete-btn" onclick="deletePost('${
+									post.id
+								}')">Удалить</button>
            </div>
            <hr />
        `;
 
 		if (post.replyTo) {
-			const parentPost = document.querySelector(`.post[data-id="${post.replyTo}"]`);
+			const parentPost = document.querySelector(
+				`.post[data-id="${post.replyTo}"]`
+			);
 			if (parentPost) {
 				parentPost.parentNode.insertBefore(postElement, parentPost.nextSibling);
 			} else {
@@ -147,31 +159,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
-// Глобальные функции для кнопок (удалить, лайк, ответить)
-
 function deletePost(postId) {
 	let posts = JSON.parse(localStorage.getItem('forumPosts')) || [];
-	posts = posts.filter(post => post.id != postId && post.replyTo != postId);
+	posts = posts.filter((post) => post.id != postId && post.replyTo != postId);
 	localStorage.setItem('forumPosts', JSON.stringify(posts));
 
 	const forumPosts = document.getElementById('forumPosts');
 	if (forumPosts) forumPosts.innerHTML = '';
 
 	const emptyMessage = document.getElementById('emptyMessage');
-	if (emptyMessage) emptyMessage.style.display = posts.length === 0 ? 'block' : 'none';
+	if (emptyMessage)
+		emptyMessage.style.display = posts.length === 0 ? 'block' : 'none';
 
-	// Заново загрузить посты после удаления
 	document.dispatchEvent(new Event('DOMContentLoaded'));
 }
 
 function toggleLike(button) {
 	const postId = button.dataset.id;
 	let posts = JSON.parse(localStorage.getItem('forumPosts')) || [];
-	const postIndex = posts.findIndex(post => post.id == postId);
+	const postIndex = posts.findIndex((post) => post.id == postId);
 
 	if (postIndex !== -1) {
 		const post = posts[postIndex];
-		const currentUser = document.getElementById('username').value.trim() || 'anonymous';
+		const currentUser =
+			document.getElementById('username').value.trim() || 'anonymous';
 		const userIndex = post.likedBy ? post.likedBy.indexOf(currentUser) : -1;
 
 		if (userIndex === -1) {

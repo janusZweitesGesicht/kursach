@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const popup = document.getElementById('popup'); //это элемент , который появляетс при нажатии на назв главы
+	const popup = document.getElementById('popup');
 	if (popup) {
 		const popupTitle = document.getElementById('popup-title');
 		const popupList = document.getElementById('popup-list');
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
-//анимка точек при наведении на главу
 document.querySelectorAll('.navigation-item').forEach((item) => {
 	const text = item.querySelector('.nav-text');
 	const dot = item.querySelector('.dot');
@@ -73,7 +72,7 @@ document.querySelectorAll('.navigation-item').forEach((item) => {
 	}
 });
 
-const startButton = document.getElementById('startButton'); //да, я сделал это так, мне пофиг
+const startButton = document.getElementById('startButton');
 if (startButton) {
 	startButton.addEventListener('click', function () {
 		window.location.href = 'read.html'; //!!!!!

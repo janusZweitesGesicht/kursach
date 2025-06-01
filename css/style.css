@@ -79,8 +79,6 @@ nav ul li {
 
 h1 {
 	font-size: 42px;
-	/* margin-bottom: 15px;
-	margin-left: 40px; */
 }
 
 .subtitle {
@@ -118,13 +116,11 @@ h1 {
 }
 
 .book {
-	/* perspective: 1000px; */
 	transform-style: preserve-3d;
 	width: 240px;
 	height: 160px;
 	position: relative;
 	margin: 20px 0 30px;
-	/* margin-left: 40px; */
 	background: url('../img/book_.png');
 	background-size: contain;
 }
@@ -179,7 +175,6 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: 0% 1%;
 	transition: background-size 0.3s;
-	/* color: rgb(255, 169, 0); */
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 	margin: 0 25px 0 25px;
@@ -206,7 +201,6 @@ h1 {
 	width: 55px;
 }
 
-/*! кастыль */
 #ww {
 	height: 55px;
 	width: 55px;

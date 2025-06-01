@@ -78,11 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
          <div class="post-date">${new Date(post.date).toLocaleString()}</div>
          <p>${escapeHtml(post.message)}</p>
          <div class="post-actions">
-            <button class="like-btn" onclick="toggleLike(this, '${post.id
-			}')">Нравится (${post.likes || 0})</button>
+            <button class="like-btn" onclick="toggleLike(this, '${
+							post.id
+						}')">Нравится (${post.likes || 0})</button>
             <button class="reply-btn" onclick="replyToPost('${escapeHtml(
-				post.username
-			)}')">Ответить</button>
+							post.username
+						)}')">Ответить</button>
          </div>
          <hr />
       `;

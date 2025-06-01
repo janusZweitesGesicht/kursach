@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const delayBetweenBranches = 7; //* скорость
 
 	function getBranchColor(color) {
-		//ф-ция цвета
+		//HSL
 		const hue = 199; //цвет
 		const saturation = 70; // насыщенность 70%
 		const lightness = 50; // светлота 50%
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			const branchColor = getBranchColor(depth);
 			line.setAttribute('stroke', branchColor);
-			//line.setAttribute('stroke', `hsl(${depth * 3}, 70%, 30%)`); //раньше был цвет, теперь он в fn
 			line.setAttribute('stroke-width', depth * 1.4); //* ширина
 			line.setAttribute('stroke-linecap', 'round');
 
@@ -57,7 +56,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	drawBranch(1100, 600, -Math.PI / 2, 150, 9, [208, 75, 46]);
 	drawBranch(210, 600, -Math.PI / 2, 100, 9, [208, 75, 46]);
-	// drawBranch(510, -140, Math.PI / 2, 100, 9);
-	// drawBranch(-20, -90, 290, 100, 9);
-	// drawBranch(-10, 600, -Math.PI / 2, 190, 9);
 });

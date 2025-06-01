@@ -43,7 +43,6 @@
 	.main-content {
 		display: flex;
 		flex-direction: column;
-		/* для адаптива лучше column */
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
@@ -52,9 +51,7 @@
 		position: relative;
 		overflow: hidden;
 		height: auto;
-		/* margin: 30px 0; */
 		padding: 0;
-		/* ← ключевой момент: нижний отступ */
 	}
 
 	.visual-content {
@@ -75,36 +72,26 @@
 		gap: 20px;
 		padding: 20px;
 		top: 42%;
-
-		/* padding-left: 20px; */
 	}
 
 	.nav-text {
 		display: flex;
 		align-items: center;
-		/* Центрируем элементы по вертикали */
 		gap: 10px;
-		/* Отступ между иконкой и текстом */
 		white-space: nowrap;
-		/* Не позволяем тексту переноситься */
 		overflow: hidden;
-		/* Обрезаем текст, если он не помещается */
 		text-overflow: ellipsis;
-		/* Добавляем многоточие, если текст слишком длинный */
 		font-size: clamp(16px, 2vw, 20px);
-		/* Адаптивный размер текста */
 		color: white;
 	}
 
 	.nav-text .icon {
 		max-width: 24px;
-		/* Ограничиваем размер иконки */
 		max-height: 24px;
 	}
 
 	.popup {
 		position: fixed;
-		/* было: absolute */
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -165,17 +152,11 @@
 
 	.nav-text {
 		white-space: normal;
-		/* Разрешим перенос */
 		overflow: visible;
-		/* Покажем весь текст */
 		text-overflow: unset;
-		/* Уберем многоточие */
 		max-width: unset;
-		/* Уберем ограничение ширины */
 		font-size: clamp(16px, 2vw, 20px);
-		/* Адаптивный размер */
 		text-align: left;
-		/* Выравнивание по левому краю */
 		flex-grow: 1;
 		flex: 1;
 		word-break: break-word;
@@ -189,17 +170,12 @@
 		height: 100%;
 		z-index: -1;
 		pointer-events: none;
-		/* Чтобы не мешал клику */
 	}
 
 	.navigation-item {
 		display: flex;
 		align-items: center;
 		gap: 15px;
-		/* Расстояние между иконкой и текстом */
-		flex-wrap: nowrap;
-		/* Не разрешаем переносить элементы */
-		margin-right: 5px;
 	}
 
 	.dot {
@@ -217,8 +193,6 @@
 
 	.dot img {
 		max-width: 40px;
-		/* Ограничиваем размер иконки */
-		max-height: 40px;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -284,15 +258,10 @@
 		justify-content: center;
 		text-align: left;
 		gap: 15px;
-		/* Расстояние между иконкой и текстом */
 		white-space: nowrap;
-		/* Запрещаем перенос текста */
 		overflow: hidden;
-		/* Обрезаем лишний текст */
 		text-overflow: ellipsis;
-		/* Добавляем многоточие */
 		overflow-wrap: break-word;
-		/* Если текст не помещается, позволяет переноситься по словам */
 		width: 100%;
 	}
 
@@ -329,11 +298,8 @@
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		margin-bottom: 0px;
 		padding: 32px 64px;
-		/* больше отступов */
 		font-size: 32px;
-		/* крупнее текст */
 		border-radius: 80px;
-		/* можно чуть более округлой */
 	}
 
 	#readMoreBtn {
@@ -342,9 +308,7 @@
 		color: white;
 		border: none;
 		padding: 20px 48px;
-		/* увеличенный отступ */
 		font-size: 10px;
-		/* увеличенный текст */
 		width: 100%;
 		border-radius: 40px;
 		cursor: pointer;
@@ -364,10 +328,7 @@
 		align-items: center;
 		margin-top: 25px;
 		padding: 0;
-		/* height: 50px; */
-		/* Установите ширину в 100% от родительского контейнера */
 		max-width: 1200px;
-		/* Установите максимальную ширину */
 	}
 
 	.navigation-dots {
@@ -420,7 +381,6 @@
 		background-size: 100% 2px;
 	}
 
-	/* popup */
 	.popup {
 		display: none;
 		position: absolute;
@@ -473,15 +433,12 @@
 		background-size: 100% 7%;
 	}
 
-	/* fractal */
 	#fractalTree {
 		position: absolute;
 		top: 150px;
-		/* или сколько нужно */
 		left: 0%;
 		width: 100%;
 		height: calc(100% - 150px);
-		/* уменьшаем высоту, чтобы не вылезало за экран */
 		z-index: -1;
 	}
 
@@ -492,11 +449,9 @@
 		margin: 0 auto;
 	}
 
-	/* Responsive */
 	@media (max-width: 768px) {
 		.nav-text {
 			font-size: clamp(14px, 3vw, 18px);
-			/* Уменьшаем размер текста */
 		}
 
 		.dot {

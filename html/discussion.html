@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
+	<head>
+		<link rel="icon" href="/img/book_read_page.svg" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Форум – Учебник визуальных технологий</title>
+		<meta
+			name="description"
+			content="Форум для обсуждения веб-графики и её роли в цифровых технологиях. Обменивайтесь мнениями, задавайте вопросы и делитесь идеями."
+		/>
+		<meta
+			name="keywords"
+			content="форум, веб-графика, цифровые технологии, обсуждение, мультимедиа, веб-разработка"
+		/>
+		<meta name="robots" content="index, follow" />
+		<link rel="stylesheet" href="/css/discussionStyle.css" />
+		<link rel="stylesheet" href="/css/style_annotation_adaptive.css" />
+		<link rel="stylesheet" href="/css/adaptive_discussion.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Форум – Веб-графика и цифровые технологии</title>
-	<meta name="description"
-		content="Форум для обсуждения веб-графики и её роли в цифровых технологиях. Обменивайтесь мнениями, задавайте вопросы и делитесь идеями." />
-	<meta name="keywords" content="форум, веб-графика, цифровые технологии, обсуждение, мультимедиа, веб-разработка" />
-	<meta name="robots" content="index, follow" />
-	<link rel="stylesheet" href="../css/discussionStyle.css" />
-	<link rel="stylesheet" href="../css/style_annotation_adaptive.css" />
-	<link rel="stylesheet" href="../css/adaptive_discussion.css" />
-
-</head>
-
-<body>
-	<div class="container">
-		<header>
-			<div class="burger" id="burger">
-				<div class="line"></div>
-				<div class="line"></div>
-				<div class="line"></div>
-			</div>
-			<div class="nav-wrapper">
-				<nav>
-					<ul>
-						<li class="nav-style"><a href="main.html">Главная</a></li>
-						<li class="nav-style"><a href="annotation.html">Аннотация</a></li>
-						<li class="nav-style"><a href="about.html">Об авторе</a></li>
-						<li class="nav-style"><a href="discussion.html">Обсуждение</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-
-		<main class="forum">
-			<h1>Форум</h1>
-			<p>
-				Здесь вы можете делиться мыслями, задавать вопросы и обсуждать
-				материалы проекта.
-			</p>
-
-			<section class="forum-form">
-				<h2>Создать сообщение</h2>
-				<form id="postForm">
-					<input type="text" id="username" placeholder="Ваше имя" required />
-					<input type="hidden" id="replyTo" value="" />
-					<textarea id="message" placeholder="Ваше сообщение..." rows="4" required></textarea>
-					<button class="buttonfx angleindouble" type="submit">
-						послать
-					</button>
-					<div id="errorMessage" class="error-message"></div>
-				</form>
-			</section>
-
-			<section class="forum-posts" id="forumPosts">
-				<h2>Сообщения</h2>
-				<div id="emptyMessage" class="empty-message">
-					Загрузка сообщений...
+	<body>
+		<div class="container">
+			<header>
+				<div class="burger" id="burger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
 				</div>
-			</section>
-		</main>
-	</div>
+				<div class="nav-wrapper">
+					<nav>
+						<ul>
+							<li class="nav-style"><a href="index.html">Главная</a></li>
+							<li class="nav-style"><a href="annotation.html">Аннотация</a></li>
+							<li class="nav-style"><a href="about.html">Об авторе</a></li>
+							<li class="nav-style">
+								<a href="discussion.html">Обсуждение</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 
-	<script src="../js/discussionWITHOTserver.js"></script>
-	<script src="../js/adaptive_discussion.js"></script>
+			<main class="forum">
+				<h1>Форум</h1>
+				<p>
+					Здесь вы можете делиться мыслями, задавать вопросы и обсуждать
+					материалы проекта.
+				</p>
 
-</body>
+				<section class="forum-form">
+					<h2>Создать сообщение</h2>
+					<form id="postForm">
+						<input type="text" id="username" placeholder="Ваше имя" required />
+						<input type="hidden" id="replyTo" value="" />
+						<textarea
+							id="message"
+							placeholder="Ваше сообщение..."
+							rows="4"
+							required
+						></textarea>
+						<button class="buttonfx angleindouble" type="submit">
+							отправить
+						</button>
+						<div id="errorMessage" class="error-message"></div>
+					</form>
+				</section>
 
+				<section class="forum-posts" id="forumPosts">
+					<h2>Сообщения</h2>
+					<div id="emptyMessage" class="empty-message">
+						Загрузка сообщений...
+					</div>
+				</section>
+			</main>
+		</div>
+
+		<script src="/js/discussionWITHOTserver.js"></script>
+		<script src="/js/adaptive_discussion.js"></script>
+	</body>
 </html>

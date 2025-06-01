@@ -1,25 +1,18 @@
-/* === Базовые стили === */
-
 .author-profile {
 	display: flex;
 	align-items: center;
 	gap: 20px;
 	flex-wrap: wrap;
-	/* Если места мало, текст уйдёт под фото */
 }
 
 .author-photo {
 	width: 190px;
-	/* БОЛЬШЕ размер */
 	height: 190px;
 	object-fit: cover;
 	border-radius: 50%;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	margin: 10;
-	/* убираем автоматические отступы */
 	flex-shrink: 0;
-	/* чтобы не сжималось при переполнении */
-	/* transform: translateX(-80px); */
 }
 
 .author-info {
@@ -81,9 +74,7 @@
 
 	.nav-wrapper nav a {
 		display: block;
-		/* <-- Важно! чтобы каждая ссылка шла с новой строки */
 		width: 100%;
-		/* растягивает до ширины меню */
 		padding: 0px 0;
 		text-decoration: none;
 		color: #fff;
@@ -136,7 +127,6 @@
 		align-items: center;
 		align-content: center;
 		gap: 20px;
-		/* width: 100%; */
 	}
 
 	nav ul {
@@ -159,14 +149,10 @@
 		padding: 0;
 	}
 
-	/* === Основной контент === */
-
 	.main-content {
 		width: 85%;
-		/* Уменьшить ширину */
 		max-width: 1200px;
 		margin: 28px;
-		/* Центрировать по горизонтали */
 		padding: 20px;
 		display: flex;
 		flex-direction: row;
@@ -232,19 +218,14 @@
 	.nav-wrapper nav {
 		display: none;
 		flex-direction: column;
-		/* <-- Уже есть, ОК */
 		align-items: center;
-		/* Центрирование по горизонтали */
 		text-align: center;
-		/* Центрирование текста */
-		/* Выравнивание текста по левому краю */
 		background-color: rgba(0, 0, 0, 0.9);
 		color: #fff;
 		position: absolute;
 		top: 100%;
 		left: 0;
 		width: 100%;
-		/* ширина под весь контейнер */
 		padding: 20px;
 		box-sizing: border-box;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -259,7 +240,6 @@
 
 	.nav-wrapper nav a:last-child {
 		border-bottom: none;
-		/* убираем нижнюю линию у последней */
 	}
 
 	.nav-wrapper nav.active {
@@ -287,15 +267,12 @@
 		max-width: 70%;
 	}
 
-	/* fractal */
 	#fractalTree {
 		position: absolute;
 		top: 0px;
-		/* или сколько нужно */
 		left: 0%;
 		width: 100%;
 		height: calc(100% - 110px);
-		/* уменьшаем высоту, чтобы не вылезало за экран */
 		z-index: -1;
 	}
 
@@ -318,11 +295,8 @@
 		border-radius: 50%;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 		width: 120px;
-		/* уменьшает размер */
 		height: auto;
-		/* сохраняет пропорции */
 		margin-top: -10px;
-		/* поднимает выше */
 		margin-left: 77px;
 		margin-right: 0;
 		display: block;
@@ -350,9 +324,7 @@
 		margin-bottom: 0px;
 		padding: 10px 22px;
 		font-size: 14px;
-		/* крупнее текст */
 		border-radius: 40px;
-		/* можно чуть более округлой */
 	}
 
 	@media (max-width: 480px) {

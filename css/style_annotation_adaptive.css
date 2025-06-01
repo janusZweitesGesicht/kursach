@@ -1,4 +1,3 @@
-/* === Базовые стили === */
 @media (max-width: 816px) {
 	body {
 		font-family: Arial, sans-serif;
@@ -43,9 +42,7 @@
 
 	.nav-wrapper nav a {
 		display: block;
-		/* <-- Важно! чтобы каждая ссылка шла с новой строки */
 		width: 100%;
-		/* растягивает до ширины меню */
 		padding: 0px 0;
 		text-decoration: none;
 		color: #fff;
@@ -98,7 +95,6 @@
 		align-items: center;
 		align-content: center;
 		gap: 20px;
-		/* width: 100%; */
 	}
 
 	nav ul {
@@ -120,8 +116,6 @@
 		list-style: none;
 		padding: 0;
 	}
-
-	/* --- Основной контент === */
 
 	.main-content {
 		display: flex;
@@ -174,8 +168,6 @@
 		background-color: #0056b3;
 	}
 
-	/* === Медиа-запросы === */
-
 	.container {
 		padding: 20px;
 	}
@@ -183,19 +175,14 @@
 	.nav-wrapper nav {
 		display: none;
 		flex-direction: column;
-		/* <-- Уже есть, ОК */
 		align-items: center;
-		/* Центрирование по горизонтали */
 		text-align: center;
-		/* Центрирование текста */
-		/* Выравнивание текста по левому краю */
 		background-color: rgba(0, 0, 0, 0.9);
 		color: #fff;
 		position: absolute;
 		top: 100%;
 		left: 0;
 		width: 100%;
-		/* ширина под весь контейнер */
 		padding: 20px;
 		box-sizing: border-box;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -210,7 +197,6 @@
 
 	.nav-wrapper nav a:last-child {
 		border-bottom: none;
-		/* убираем нижнюю линию у последней */
 	}
 
 	.nav-wrapper nav.active {
@@ -238,15 +224,12 @@
 		max-width: 70%;
 	}
 
-	/* fractal */
 	#fractalTree {
 		position: absolute;
 		top: 255px;
-		/* или сколько нужно */
 		left: 0%;
 		width: 100%;
 		height: calc(100% - 110px);
-		/* уменьшаем высоту, чтобы не вылезало за экран */
 		z-index: -1;
 	}
 
@@ -271,9 +254,7 @@
 		margin-bottom: 0px;
 		padding: 10px 22px;
 		font-size: 14px;
-		/* крупнее текст */
 		border-radius: 40px;
-		/* можно чуть более округлой */
 	}
 
 	@media (max-width: 480px) {

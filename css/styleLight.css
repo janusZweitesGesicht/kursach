@@ -35,8 +35,6 @@ body.light-theme .reading_page {
 	background-color: lightgray;
 }
 
-/* ________смена темы__________---- */
-
 body.light-theme .st0 {
 	stroke: #000000;
 }
@@ -62,10 +60,6 @@ body.light-theme .notebbb {
 body.light-theme .conv {
 	stroke: #000000;
 }
-
-/* .conversation path {
-	stroke: #000000;
-} */
 
 body.light-theme .back-btn {
 	color: #000;
